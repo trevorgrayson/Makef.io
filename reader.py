@@ -1,4 +1,7 @@
 from os.path import exists
+from functools import reduce
+
+from make import Makefile
 
 
 def path(word):
@@ -6,23 +9,22 @@ def path(word):
 
 
 def read(*args):
-    out = ""
-    pathes = []
+    mks = []
 
     for arg in args:
         p = path(arg)
 
         if exists(p):
             with open(p, 'r') as fp:
-                out += fp.read()
+                mks.append(Makefile.parse(fp.readlines()))
         else:
             p = path(args[0] + '/' + arg)
 
             if exists(p):
                 with open(p, 'r') as fp:
-                    out += fp.read()
+                    mks.append(Makefile.parse(fp.readlines()))
         
-    return out
+    return reduce(lambda a,b: a+b, mks).render()
 
 def replace_opts(make, **opts):
     lines = make.split("\n")

@@ -1,7 +1,8 @@
 from flask import Flask, redirect
 from reader import read
 
-TARGET_HOST = "https://raw.githubusercontent.com/trevorgrayson/Makefiles/master/%s/Makefile"
+from make.config import TARGET_HOST
+
 
 app = Flask(__name__)
 

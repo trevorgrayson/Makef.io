@@ -26,8 +26,8 @@ class Makefile:
         mf = "\n".join(self.header) + "\n"
 
         for target, body in self.targets.items():
-            mf += f"{target}:{self.deps[target]}\n"
-            mf += "\n".join(body)
+            mf += f"{target}:{self.deps[target]}"
+            mf += "".join(body)
 
         return mf 
 
