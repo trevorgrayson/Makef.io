@@ -13,7 +13,7 @@ putting the following at the start of your `Makefile` to include these resources
 
 
 ```
-$(shell curl -o python.Makefile https://raw.githubusercontent.com/trevorgrayson/Makefiles/master/python/Makefile)
+$(shell test -f python.Makefile || curl -o python.Makefile https://raw.githubusercontent.com/trevorgrayson/Makefiles/master/python/Makefile)
 include python.Makefile
 ```
 

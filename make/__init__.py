@@ -16,8 +16,20 @@ class Makefile:
         self.targets = defaultdict(list)
         self.deps = {}
 
-    def render(self):
-        pass
+    def render(self, **kwargs):
+        """
+        Args:
+            kwargs - set any env `VARIABLE?=` you would like to override
+        Returns:
+            text Makefile doc
+        """
+        mf = "\n".join(self.header) + "\n"
+
+        for target, body in self.targets.items():
+            mf += f"{target}:{self.deps[target]}\n"
+            mf += "\n".join(body)
+
+        return mf 
 
     def __add__(self, other):
         self.deps.update(other.deps)

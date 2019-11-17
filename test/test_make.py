@@ -14,6 +14,17 @@ boom:
 	punch
 """.split("\n")
 
+EXPECT = """
+
+test: deps1 deps2
+	./test
+clean: 
+	rm -rf garbage
+
+boom:
+	punch
+"""
+
 class TestMakefile:
     def test_parse(self):
         mk = Makefile.parse(MAKEFILE)
@@ -34,3 +45,12 @@ class TestMakefile:
         assert mk.deps['test'] == ' deps1 deps2'
         assert mk.targets['test'] == ['	./test', '']
         assert mk.targets['boom'] == ['	punch', '']
+
+
+    def test_prints_make(self):
+        a = Makefile.parse(MAKEFILE) 
+        b = Makefile.parse(MAKEFILE2)
+
+        mk = a + b
+
+        assert mk.render() ==  EXPECT
