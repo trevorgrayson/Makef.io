@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <style>
+      html {
+        background: #666;
+      }
+
+      body {
+        width: 800px;
+        margin: 0 auto;
+        padding: 50px 20px;
+
+        background: #fff;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <h1>makef.io</h1>
+    <p>Yesterdays technology -- today!</p>
+
+    <p>Are you working on a sofware project? This may benefit you.
+    `Makefiles` are an interface that helps 
+    https://medium.com/@trevorgrayson/the-build-lifecycle-interface-every-software-project-needs-264e6affaac0
+    
+    </p>
+    <p>This is about leveraging `Makefile`s</p>
+    <h2>Including makef.io</h2>
+    <p>For the initiated, who already use Makefiles, you can include
+      makef.ios very simply by including the top of your Makefile.
+    </p>
+
+    <code>
+      $(shell test -f Makef.io || curl -o Makef.io makef.io/python)
+      include Makef.io
+    </code>
+
+    <p>
+      `test -f Makef.io` will check to see if a `Makef.io` exists, the `curl` will
+      download the file if it does not. Notice the `/python`.  This will download
+      a stock Makefile for python.  It includes `test`, `clean`, `compile` targets.
+      You may mix multiple Makef.ios together by continuing the slashes.
+      <code>makef.io/python/travisci</code> will include python targets and a target to
+      build a `.travis.yml` build script for the project.
+    </p>
+
+    <h2>What am I getting?</h2>
+    <p>
+      To be clear this service is essentially a proxy for <a href="https://github.com/trevorgrayson/makefiles">github.com/trevorgrayson/makefiles</a>.
+    </p>
+    <p>
+      "To start with I use makefiles for *all* project irrespective of the language." ~ <a href="http://erlang.org/pipermail/erlang-questions/2008-February/033214.html">Joe Armstrong</a>.
+    </p>
+  </body>
+</html>
