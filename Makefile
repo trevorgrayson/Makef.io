@@ -1,5 +1,6 @@
-$(shell test -f .Makef.io || curl -o .Makef.io makef.io/python/docker/travisci)
+$(shell test -f .Makef.io || curl -o .Makef.io makef.io/python/travisci)
 include .Makef.io
+include docker/Makefile
 
 IMAGE=tgrayson/makef.io
 
