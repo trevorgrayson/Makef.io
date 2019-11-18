@@ -1,2 +1,2 @@
-flask==1.1.1
 -r requirements/app.txt
+-r requirements/build.txt
