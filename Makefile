@@ -6,6 +6,8 @@ IMAGE=tgrayson/makef.io
 # build server
 install: compile
 test: #cicd
+image: #cicd
+imagePush: #cicd
 
 
 server:
