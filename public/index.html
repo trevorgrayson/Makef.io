@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <style>
+      html {
+        background: #666;
+      }
+
+      body {
+        width: 800px;
+        margin: 0 auto;
+        padding: 50px 20px;
+
+        background: #fff;
+      }
+      .tagline {
+        margin-top: 0;
+        font-style: italic;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <h1>makef.io</h1>
+    <p class="tagline">Yesterdays technology -- today!</p>
+
+    <p>
+      Use Makefiles to run your software project's <a>life cycle</a>. makef.io's
+      goal is to provide common <a>targets</a> through most programming languages 
+      and frameworks.&nbsp;&nbsp;<code>make test</code> should work in python, java, ruby or javascript.
+    </p>
+
+    <p>
+      You may already have a framework like Django, Ruby on Rails, or gradle, but Makefiles
+      will give you a <a href="https://medium.com/@trevorgrayson/the-build-lifecycle-interface-every-software-project-needs-264e6affaac0">standard interface </a> 
+      to interact with with your projects. makef.ios "just work."
+    </p>
+
+    <p><code>make</code> is on every developer's machine and isn't going away any time soon.</p>
+    
+    <h2>Including makef.io</h2>
+    <p>For the initiated who already use Makefiles, you can include
+      makef.ios by including this at the top of your Makefile.
+    </p>
+
+    <code>
+      $(shell test -f Makef.io || curl -o Makef.io makef.io/python)<br/>
+      include Makef.io
+    </code>
+
+    <p>
+      <code>test -f Makef.io</code> will check to see if a <code>Makef.io</code> file exists, and <code>curl</code> will
+      download the file if it does not. Notice the <code>/python</code>.  This will download
+      a stock Makefile for python.  It includes <code>test</code>, <code>clean</code>, <code>compile</code> targets.
+      You may mix multiple Makef.ios together by continuing the slashes.
+      <code>makef.io/python/travisci</code> will include python targets and a target to
+      build a <code>.travis.yml</code> build script for the project.
+    </p>
+
+    <h2>What do you get?</h2>
+    <p>
+      This service is a proxy for <a href="https://github.com/trevorgrayson/makefiles">github.com/trevorgrayson/makefiles</a>.
+      Keep an eye out for new <a>supported technologies</a>. New features will 
+      help you compose many Makefiles for your project. 
+
+    </p>
+    <ul>
+      <li><code>makef.io/docker</code> will add <a>targets</a> for only docker.</li>
+      <li><code>makef.io/docker/python</code> will add targets for docker and python. Later makef.ios have greater priority.</li>
+      <li><code>makef.io/python?PYTHON=python3</code> will set the PYTHON <a>Environment variable</a></li>
+    </ul>
+
+    <h2>What the heck is a <a href="https://opensource.com/article/18/8/what-how-makefile">Makefile</a>?</h2>
+    <p>
+  
+    </p>
+
+    <p>
+      "To start with I use makefiles for *all* project irrespective of the language." ~ <a href="http://erlang.org/pipermail/erlang-questions/2008-February/033214.html">Joe Armstrong</a>.
+    </p>
+  </body>
+</html>
