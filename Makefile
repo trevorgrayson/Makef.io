@@ -1,7 +1,7 @@
 $(shell test -f .Makef.io || curl -o .Makef.io makef.io/python/travisci/docker:poormans)
 include .Makef.io
-include docker/Makefile
-include docker:poormans/Makefile
+include Makefiles/docker/Makefile
+include Makefiles/docker:poormans/Makefile
 
 IMAGE=tgrayson/makef.io
 DOCKER_ARGS="-p 5005:5005"
