@@ -1,1 +1,1 @@
-TARGET_HOST = "https://raw.githubusercontent.com/trevorgrayson/Makefiles/master/%s/Makefile"
+TARGET_HOST = "https://raw.githubusercontent.com/trevorgrayson/Makef.io/master/Makefiles/%s/Makefile"

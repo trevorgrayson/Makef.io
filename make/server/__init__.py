@@ -32,6 +32,7 @@ def many(path):
 def redir(path):
     return redirect(TARGET_HOST % path)
 
+
 @app.route('/')
 def welcome():
     return LANDING
