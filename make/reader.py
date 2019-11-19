@@ -5,7 +5,7 @@ from make import Makefile
 
 
 def path(word):
-    return "%s/Makefile" % word
+    return "Makefiles/%s/Makefile" % word
 
 
 def read(*args):

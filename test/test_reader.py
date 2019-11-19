@@ -1,4 +1,4 @@
-from reader import read, replace_opts
+from make.reader import read, replace_opts
 
 
 class TestReader:
