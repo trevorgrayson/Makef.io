@@ -14,6 +14,8 @@ def headers():
         'Content-Type': 'text/Makefile'
     }
 
+LANDING = open('public/index.html', 'r').read()
+
 @app.route('/<path:path>')
 def many(path):
     words = str(path).split('/')
@@ -32,4 +34,4 @@ def redir(path):
 
 @app.route('/')
 def welcome():
-    return "welcome"
+    return LANDING
