@@ -25,21 +25,22 @@
 
     <p>
       Use Makefiles to run your software project's <a>life cycle</a>. makef.io's
-      goal is to provide common <a>targets</a> through most programming languages 
-      and frameworks.&nbsp;&nbsp;<code>make test</code> should work in python, java, ruby or javascript.
+      goal is to provide common <a>targets</a> for most programming languages 
+      and frameworks.&nbsp;&nbsp;<code>make test</code> should work in all of 
+      your projects, whether they are python, java, ruby or javascript...
     </p>
 
     <p>
       You may already have a framework like Django, Ruby on Rails, or gradle, but Makefiles
       will give you a <a href="https://medium.com/@trevorgrayson/the-build-lifecycle-interface-every-software-project-needs-264e6affaac0">standard interface </a> 
-      to interact with with your projects. makef.ios "just work."
+      to interact with with your projects. makef.io <code>Makefiles</code> "just work."
     </p>
 
-    <p><code>make</code> is on every developer's machine and isn't going away any time soon.</p>
+    <p><code>make</code> is installed on every developer's machine and isn't going away any time soon.</p>
     
     <h2>Including makef.io</h2>
     <p>For the initiated who already use Makefiles, you can include
-      makef.ios by including this at the top of your Makefile.
+      makef.ios by putting this at the top of your Makefile.
     </p>
 
     <code>
@@ -49,16 +50,20 @@
 
     <p>
       <code>test -f Makef.io</code> will check to see if a <code>Makef.io</code> file exists, and <code>curl</code> will
-      download the file if it does not. Notice the <code>/python</code>.  This will download
-      a stock Makefile for python.  It includes <code>test</code>, <code>clean</code>, <code>compile</code> targets.
-      You may mix multiple Makef.ios together by continuing the slashes.
-      <code>makef.io/python/travisci</code> will include python targets and a target to
-      build a <code>.travis.yml</code> build script for the project.
+      download the file if it does not. 
     </p>
 
     <h2>What do you get?</h2>
+    <p>Notice the "<code>/python</code>" path from the previous example.  This will download a stock Makefile for python.  
+      It includes <code>test</code>, <code>clean</code>, and <code>compile</code> targets.
+      You may mix multiple Makef.ios together by joining with slashes.
+    </p>
     <p>
-      This service is a proxy for <a href="https://github.com/trevorgrayson/makefiles">github.com/trevorgrayson/makefiles</a>.
+      "<code>makef.io/python/docker</code>" will include python targets, and targets to
+      work with docker.
+    </p>
+    <p>
+      This service is a proxy for <a href="https://github.com/trevorgrayson/Makef.io">github.com/trevorgrayson/Makef.io</a>.
       Keep an eye out for new <a>supported technologies</a>. New features will 
       help you compose many Makefiles for your project. 
 
@@ -66,8 +71,12 @@
     <ul>
       <li><code>makef.io/docker</code> will add <a>targets</a> for only docker.</li>
       <li><code>makef.io/docker/python</code> will add targets for docker and python. Later makef.ios have greater priority.</li>
+      <!--
       <li><code>makef.io/python?PYTHON=python3</code> will set the PYTHON <a>Environment variable</a></li>
+      -->
     </ul>
+
+    <p>Pull requests are welcome!!!</p>
 
     <h2>What the heck is a <a href="https://opensource.com/article/18/8/what-how-makefile">Makefile</a>?</h2>
     <p>
