@@ -1,5 +1,5 @@
 # Makefiles
-compilation of Makefiles for software frameworks.
+Makefile compiler for software frameworks.
 
 This repo includes a list of reusable Makefiles for popular languages and frameworks.  You may of course
 copy files off this site and edit them to your liking.  
