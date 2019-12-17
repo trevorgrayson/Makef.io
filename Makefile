@@ -3,6 +3,7 @@ include .Makef.io
 include Makefiles/docker/Makefile
 include Makefiles/docker:poormans/Makefile
 
+PROJECT=makef.io
 IMAGE=tgrayson/makef.io
 DOCKER_ARGS="-p 5005:5005"
 HOST=makef.io

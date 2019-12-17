@@ -4,7 +4,6 @@ VENV?=venv
 export PYTHONPATH = .:$(VENV)
 
 test: compile
-	mkdir -p $(VENV)
 	$(PYTHON) -m pytest $(TEST)
 
 integ: compile
@@ -12,6 +11,7 @@ integ: compile
 
 compile: $(VENV)
 $(VENV): requirements.txt requirements/*.txt
+	mkdir -p $(VENV)
 	$(PYTHON) -m pip -V || curl https://bootstrap.pypa.io/get-pip.py | $(PYTHON)
 	$(PYTHON) -m pip install -q -t $(VENV) -r requirements.txt
 	touch $(VENV)
