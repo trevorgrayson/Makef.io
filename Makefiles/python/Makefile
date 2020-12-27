@@ -9,8 +9,11 @@ test: compile
 integ: compile
 	$(PYTHON) -m pytest -o pytest.integ.ini $(TEST)
 
+requirements.txt:
+	touch requirements.txt
+
 compile: $(VENV)
-$(VENV): requirements.txt requirements/*.txt
+$(VENV): requirements.txt
 	mkdir -p $(VENV)
 	$(PYTHON) -m pip -V || curl https://bootstrap.pypa.io/get-pip.py | $(PYTHON)
 	$(PYTHON) -m pip install -q -t $(VENV) -r requirements.txt
